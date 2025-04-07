@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Labs.md",
+                "file": "Techniques and Payloads.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Labs"
+              "title": "Techniques and Payloads"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Labs.md",
+                "file": "Techniques and Payloads.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Labs"
+              "title": "Backlinks for Techniques and Payloads"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Labs.md",
+                "file": "Techniques and Payloads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Labs"
+              "title": "Outgoing links from Techniques and Payloads"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Labs.md",
+                "file": "Techniques and Payloads.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Labs"
+              "title": "Outline of Techniques and Payloads"
             }
           }
         ]
@@ -199,8 +199,8 @@
   },
   "active": "0dad9e56b377601e",
   "lastOpenFiles": [
-    "Welcome.md",
     "Labs.md",
+    "Welcome.md",
     "Techniques and Payloads.md",
     "Vulnerable Features and Applicable Labs.md"
   ]

