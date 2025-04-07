@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Techniques and Payloads.md",
+                "file": "Vulnerable Features and Applicable Labs.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Techniques and Payloads"
+              "title": "Vulnerable Features and Applicable Labs"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Techniques and Payloads.md",
+                "file": "Vulnerable Features and Applicable Labs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Techniques and Payloads"
+              "title": "Backlinks for Vulnerable Features and Applicable Labs"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Techniques and Payloads.md",
+                "file": "Vulnerable Features and Applicable Labs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Techniques and Payloads"
+              "title": "Outgoing links from Vulnerable Features and Applicable Labs"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Techniques and Payloads.md",
+                "file": "Vulnerable Features and Applicable Labs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Techniques and Payloads"
+              "title": "Outline of Vulnerable Features and Applicable Labs"
             }
           }
         ]
@@ -199,9 +199,9 @@
   },
   "active": "0dad9e56b377601e",
   "lastOpenFiles": [
+    "Techniques and Payloads.md",
     "Labs.md",
     "Welcome.md",
-    "Techniques and Payloads.md",
     "Vulnerable Features and Applicable Labs.md"
   ]
 }
