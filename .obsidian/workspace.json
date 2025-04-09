@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vulnerable Features and Applicable Labs.md",
+                "file": "Labs.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Vulnerable Features and Applicable Labs"
+              "title": "Labs"
             }
           }
         ],
@@ -200,8 +200,8 @@
   "active": "0dad9e56b377601e",
   "lastOpenFiles": [
     "Techniques and Payloads.md",
+    "Vulnerable Features and Applicable Labs.md",
     "Labs.md",
-    "Welcome.md",
-    "Vulnerable Features and Applicable Labs.md"
+    "Welcome.md"
   ]
 }
